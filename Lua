@@ -1,0 +1,17 @@
+local video
+
+function love.load()
+    -- Încarcă videoclipul (asigură-te că ai un fișier video valid în directorul proiectului)
+    video = love.graphics.newVideo('numele_videoclipului.mp4')
+    video:play()
+end
+
+function love.update(dt)
+    -- Actualizează videoclipul
+    video:update(dt)
+end
+
+function love.draw()
+    -- Desenează videoclipul
+    love.graphics.draw(video, 0, 0)
+end
